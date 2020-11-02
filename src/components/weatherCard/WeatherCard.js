@@ -655,6 +655,11 @@ const WeatherCard = (props) => {
 
   return (
     <div className="App-WeatherCard-Container">
+      {!dayWeather &&
+        <div style={{color: 'white', width:'100%', height: '100%', display:'flex', 'justifyContent': 'center', 'alignItems': 'center'}}>
+            Loading
+        </div>
+      }
       {
         dayWeather &&
         <div className={`App-WeatherCard ${isWideScreen ? 'wide-screen' : ''}`}>
