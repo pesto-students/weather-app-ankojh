@@ -4,12 +4,11 @@ import LocationInput from '../../components/locationInput/LocationInput';
 import './Search.css'
 
 const FAMOUS_LOCATIONS = [
-  { lon: '22', lat: '88', name: 'Delhi' },
-  { lon: '22', lat: '88', name: 'Agra' },
-  { lon: '22', lat: '88', name: 'Amritsar' },
-  { lon: '22', lat: '88', name: 'Paris' },
-  { lon: '22', lat: '88', name: 'New York' },
-  { lon: '22', lat: '88', name: 'London' },
+  { latitude: '28.70', longitude: '77.10', name: 'Delhi' },
+  { latitude: '27.17', longitude: '78.00', name: 'Agra' },
+  { latitude: '31.63', longitude: '74.87', name: 'Amritsar' },
+  { latitude: '48.856', longitude: '2.35', name: 'Paris' },
+  { latitude: '51.50', longitude: '-0.12', name: 'London' },
 ]
 
 
@@ -18,6 +17,7 @@ const Search = () => {
   const history = useHistory();
 
   function locationChanged(locationDetails) {
+    
     history.push(`/?${new URLSearchParams({
       lon: locationDetails.longitude.toString().substr(0, 5),
       lat: locationDetails.latitude.toString().substr(0, 5)
@@ -33,7 +33,7 @@ const Search = () => {
       <span className="trending-title">Trending Places</span>
       <div className="location-famous-container"> 
       {FAMOUS_LOCATIONS.map((location, index)=>
-        <div key={index} className="location-famous-card">{location.name}</div>)}
+        <div key={index} className="location-famous-card" onClick={e => { locationChanged(location)}}>{location.name}</div>)}
       </div>
 
     </div>

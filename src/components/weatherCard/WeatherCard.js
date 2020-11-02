@@ -43,8 +43,11 @@ const WeatherCard = (props) => {
       return;
     }
 
-
     if(props.longitude === state.previousLon && props.latitude === state.previousLat){
+      setState({
+        ...state,
+        day: props.day
+      })
       return;
     }
     
