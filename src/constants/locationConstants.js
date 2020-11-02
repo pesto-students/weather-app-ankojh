@@ -1,0 +1,1 @@
+export const DEFAULT_LOCATION = { latitude: 22.57, longitude: 88.36 }

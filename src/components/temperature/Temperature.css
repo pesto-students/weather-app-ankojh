@@ -1,0 +1,35 @@
+.App-Temperature{
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+  text-align: center;
+}
+
+.App-Temperature.wide-screen{
+  border-radius: 20px;
+  padding: 15px;
+}
+
+
+.temp{
+  font-size: 30px;
+}
+
+.App-Temperature.wide-screen .temp{
+  font-size: 70px;
+}
+
+
+
+
+.temp-minmax{
+  font-size: 30px;
+}
+
+.App-Temperature.wide-screen .temp-minmax {
+    font-size: 40px;
+}
+
+.temp-legend{
+}

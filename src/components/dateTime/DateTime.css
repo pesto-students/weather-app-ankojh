@@ -1,0 +1,40 @@
+.App-Time{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.App-Time.wide-screen{
+  flex-direction: row;
+}
+
+
+.App-Time div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-Time div .time-data{
+font-size: 30px;
+}
+
+.App-Time .date-control {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  flex-direction: row;
+}
+
+.date-control span{
+  color: rgb(243, 151, 255);
+  cursor: pointer;
+}
+
+
+.date-control span:hover{
+  text-decoration: underline;
+}

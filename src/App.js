@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.css';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import  { BackgroundContext } from './contexts/backgroundContext';
+import Search from './pages/search/Search';
+import Weather from './pages/weather/Weather';
 
 function App() {
+
+
+  const {backgroundURL} = useContext(BackgroundContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <div className="App">
+          <img className="App-Background" src={backgroundURL} alt="background" />
+          <div className="App-Content">
+          <Header />
+          <div className="App-Body">
+            <Switch>
+              {/* <Route path="/onboard">
+                <Onboard />
+              </Route>
+              <Route path="/login">
+                <Login />
+              </Route> */}
+              <Route path="/search">
+                <Search />
+              </Route>
+              <Route path="/">
+                <Weather />
+              </Route>
+            </Switch>
+          </div>
+          <Footer />
+        </div>
+        </div>
+    </Router>
   );
 }
 

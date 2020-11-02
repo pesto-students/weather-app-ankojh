@@ -1,0 +1,12 @@
+.App-Humidity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-Humidity .humidity {
+  font-size: 30px;
+}
+.App-Humidity.wide-screen .humidity {
+  font-size: 40px;
+}

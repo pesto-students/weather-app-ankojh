@@ -1,0 +1,14 @@
+.App-WindSpeed{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-WindSpeed .speed{
+  font-size: 30px;
+}
+
+
+.App-WindSpeed.wide-screen .speed{
+  font-size: 40px;
+}
