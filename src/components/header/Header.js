@@ -34,8 +34,8 @@ const Header = () => {
       <div className="header-title">mawesome</div>
       <img className="header-avatar" src={avatar} alt="bun" onClick={toggleAvatar} />
       { avatarStatus && <div className="avatar-list">
-        <span>Guest Bunny</span>
-        <span onClick={toggleUnits}>{unit === 'imperial' ? 'Metric' : 'Imperial'} values</span>
+        <span >Guest Bunny</span>
+        <span className="list-selectable" onClick={toggleUnits}>{unit === 'imperial' ? 'Metric' : 'Imperial'} values</span>
       </div>}
     </div>
   );

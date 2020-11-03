@@ -39,9 +39,16 @@
   align-items: center;
   margin-top: 20px;
 }
+/* 
+.city-title span{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
 
 .App-WeatherCard.wide-screen .city-title {
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 
@@ -52,7 +59,7 @@
 
 
 .App-WeatherCard.wide-screen .city-name{
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .city-name img{
@@ -78,6 +85,30 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+}
+
+.city-temperature{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.App-WeatherCard.wide-screen .city-temperature{
+  justify-content: space-between;
+}
+
+
+.city-temperature img{
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+
+}
+
+.App-WeatherCard.wide-screen .city-temperature img{
+  display: block;
 }
 
 .App-WeatherCard.wide-screen .city-details{
@@ -108,8 +139,51 @@
 .city-weather-change{
    color: rgb(243, 151, 255);
    cursor: pointer;
+   user-select: none;
 }
 
 .city-weather-change:hover{
   text-decoration: underline;
+}
+
+.city-weather-icon{
+   filter: hue-rotate(37deg) contrast(10) drop-shadow(1px 1px 6px white);
+   height:80px;
+   margin-top: -20px;
+   margin-bottom: -20px;
+}
+
+
+.App-WeatherCard.wide-screen .city-weather-icon{
+  height:150px;
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
+
+.w-card-loading{  
+  animation: loading 1s ease-in-out infinite;
+}
+
+.w-card-loading img{
+  height: 200px;
+}
+
+.w-card-loading span{
+  font-size: 30px;
+}
+
+.App-WeatherCard.wide-screen .w-card-loading img{
+  height: 500px;
+}
+
+.App-WeatherCard.wide-screen .w-card-loading span {
+  font-size: 40px;
+}
+
+
+
+
+@keyframes loading{
+  0% {transform: scale(0.9)}
+  50% {transform: scale(1.1)}
 }

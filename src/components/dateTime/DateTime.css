@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  margin-bottom: 10px;
 }
 
 .App-Time.wide-screen{
@@ -30,6 +31,7 @@ font-size: 30px;
 }
 
 .date-control span{
+  user-select: none;
   color: rgb(243, 151, 255);
   cursor: pointer;
 }

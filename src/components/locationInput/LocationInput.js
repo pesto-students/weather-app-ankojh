@@ -41,10 +41,11 @@ const LocationInput = (props) => {
 
 
   return (
-    <div className={`App-LocationInput ${isWideScreen ? 'wide-screen' : ''} ${state.suggestions.length ? 'suggestions-showing': ''}`}>
+    <div className={`App-LocationInput ${isWideScreen ? 'wide-screen' : ''} ${state.suggestions.length && searchQuery ? 'suggestions-showing': ''}`}>
       <input
         className="location-input"
-        placeholder="Type Here..."
+        placeholder="Awesome City"
+        autoFocus
         value={searchQuery}
         onChange={e => setSearchQuery(e.target.value)} />
       { searchQuery && state.suggestions.length && <div className="location-suggestions">

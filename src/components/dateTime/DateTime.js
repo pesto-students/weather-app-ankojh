@@ -24,8 +24,9 @@ const DateTime = (props) => {
     props.dateChanged && props.dateChanged(props.day - 1);
   }
 
-
-  const date = new Date(props.timeStamp * 1000)
+  const timeZoneOffset = new Date().getTimezoneOffset();
+  const differenceInOffset = timeZoneOffset + props.timezoneOffset/60;
+  const date = new Date( differenceInOffset * 60 * 1000 + new Date().getTime())
 
   return (
     <div className={`App-Time ${isWideScreen ? 'wide-screen' : ''}`}>
