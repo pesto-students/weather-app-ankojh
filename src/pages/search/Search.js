@@ -4,14 +4,14 @@ import LocationInput from '../../components/locationInput/LocationInput';
 import './Search.css'
 
 const FAMOUS_LOCATIONS = [
-  { latitude: '28.70', longitude: '77.10', name: 'Delhi' },
-  { latitude: '27.17', longitude: '78.00', name: 'Agra' },
-  { latitude: '31.63', longitude: '74.87', name: 'Amritsar' },
-  { latitude: '48.856', longitude: '2.35', name: 'Paris' },
-  { latitude: '51.50', longitude: '-0.12', name: 'London' },
-  { latitude: '25.26', longitude: '55.30', name: 'Dubai' },
-  { latitude: '1.289', longitude: '103.8', name: 'Singapore' },
-  { latitude: '41.89', longitude: '12.48', name: 'Rome' },
+  { latitude: '28.70', longitude: '77.10', name: 'Delhi, IN' },
+  { latitude: '27.17', longitude: '78.00', name: 'Agra, IN' },
+  { latitude: '31.63', longitude: '74.87', name: 'Amritsar, IN' },
+  { latitude: '48.856', longitude: '2.35', name: 'Paris, FR' },
+  { latitude: '51.50', longitude: '-0.12', name: 'London, GB' },
+  { latitude: '25.26', longitude: '55.30', name: 'Dubai, AE' },
+  { latitude: '1.289', longitude: '103.8', name: 'Singapore, SG' },
+  { latitude: '41.89', longitude: '12.48', name: 'Rome, IT' },
 ]
 
 

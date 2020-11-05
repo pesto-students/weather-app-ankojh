@@ -101,8 +101,8 @@ const WeatherCard = (props) => {
               <span className="city-name">
                 <img src={locationIcon} alt="location" />
                 {state.placeDetails[0].city}, {state.placeDetails[0].countryCode}</span>
+              <span className="city-location">{Math.abs(props.latitude)}° {props.latitude > 0 ? 'N' : 'S'} {Math.abs(props.longitude)}° {props.longitude > 0 ? 'E' : 'W'}</span>
               <span className="city-weather-change" onClick={e => history.push('/search')}>change</span>
-              <span className="city-location">Lon: {props.longitude} Lat: {props.latitude}</span>
               <img className="city-weather-icon" src={`http://openweathermap.org/img/wn/${dayWeather.weather[0].icon}@2x.png`} alt="weather-icon" />
               <span className="city-weather-description">{dayWeather.weather[0].description}</span>
             </div>

@@ -28,6 +28,11 @@ const LocationInput = (props) => {
 
   async function getSuggestions() {
     setSearching(true)
+    setState({ ...state, suggestions: [] })
+    // if(!searchQuery){
+    //   setSearching(false)
+    //   return;
+    // }
     const response = await debouncedGetCities(searchQuery);
     setState({ ...state, suggestions: response })
     setSearching(false)

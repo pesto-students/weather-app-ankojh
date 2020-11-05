@@ -101,6 +101,7 @@
 
 .city-temperature img{
   height: 80px;
+  width: 80px;
   background-color: white;
   border-radius: 50%;
   display: none;
@@ -140,6 +141,7 @@
    color: rgb(243, 151, 255);
    cursor: pointer;
    user-select: none;
+   margin-bottom: 10px;
 }
 
 .city-weather-change:hover{
@@ -149,19 +151,22 @@
 .city-weather-icon{
    filter: hue-rotate(37deg) contrast(10) drop-shadow(1px 1px 6px white);
    height:80px;
+   width: 80px;
    margin-top: -20px;
    margin-bottom: -20px;
+   pointer-events: none;;
 }
 
 
 .App-WeatherCard.wide-screen .city-weather-icon{
   height:150px;
+  width: 150px;
   margin-top: -30px;
   margin-bottom: -30px;
 }
 
 .w-card-loading{  
-  animation: loading 1s ease-in-out infinite;
+  animation: loading 1s ease-in-out infinite alternate;
 }
 
 .w-card-loading img{
@@ -185,5 +190,5 @@
 
 @keyframes loading{
   0% {transform: scale(0.9)}
-  50% {transform: scale(1.1)}
+  100% {transform: scale(1.1)}
 }

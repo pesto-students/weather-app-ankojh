@@ -27,11 +27,12 @@ const DateTime = (props) => {
   const timeZoneOffset = new Date().getTimezoneOffset();
   const differenceInOffset = timeZoneOffset + props.timezoneOffset/60;
   const date = new Date( differenceInOffset * 60 * 1000 + new Date().getTime())
+  const dateShown = new Date (props.timeStamp * 1000);
 
   return (
     <div className={`App-Time ${isWideScreen ? 'wide-screen' : ''}`}>
       <div>
-        <span className="time-data">{date.toDateString()}</span>
+        <span className="time-data">{dateShown.toDateString()}</span>
         <div className="date-control">
           <span onClick={prevClicked} style={{ visibility: parseInt(props.day) ? 'visible' : 'hidden' }}>Previous Day</span>
           <span style={{ visibility: props.day < 7 ? 'visible' : 'hidden' }} onClick={nextClicked}>Next Day</span>
